@@ -111,7 +111,7 @@ sleep 5
 
 echo -e "\033[36;1m Setting up ini config \033[0m"
 
-sed -i 's/skin=default/skin=darknight/g' /home/*/.config/mc/ini
+sed -i 's/^skin=[a-zA-Z0-9]*/skin=darknight/' /home/*/.config/mc/ini
 
 sleep 5
 
