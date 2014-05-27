@@ -6,7 +6,21 @@
 
 The script was tested on Ubuntu 12.04LTS and 13.04LTS and should also work on Debian. As always, you must make your own backup of `ini` file located at `/home/user/.config/mc/ini`.
 
-Yes, it must be run as root or superuser.
+### Download
+
+There are two ways to download the script.
+
+	git clone https://github.com/giobautista/DarkNight.git
+
+**or**
+
+	wget https://github.com/giobautista/DarkNight/raw/master/install-darknight.sh
+	
+then you will need to set the file permissions and make it executable.
+
+	sudo chmod 770 install-darknight.sh
+	
+Lastly, run the installer and yes, it must be run as root or superuser.
 
 	sudo ./install-darknight.sh
 
