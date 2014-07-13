@@ -111,7 +111,17 @@ sleep 5
 
 echo -e "\033[36;1m Setting up ini config \033[0m"
 
-sed -i 's/^skin=[a-zA-Z0-9]*/skin=darknight/' /home/*/.config/mc/ini
+INI_FILE=/home/*/.config/mc/ini
+
+if [ -f $INI_FILE ];
+then
+    sed -i 's/^skin=[a-zA-Z0-9]*/skin=darknight/' $INI_FILE
+else
+    echo -e "\033[31;1m Error: ini config file does not exists. \033[0m"
+    echo " Run MC for the first time then exit then run the installation again."
+    echo " "
+    exit 100
+fi
 
 sleep 5
 
